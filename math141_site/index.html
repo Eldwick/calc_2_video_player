@@ -1,0 +1,85 @@
+<html>
+<head>
+  <title>MATH 141</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="styles/styles.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular-animate.js"></script>
+
+  <script src="js/math141_app.js"></script>
+</head>
+<body>
+
+  <section ng-app="math141" class="container" ng-controller="Math141Ctrl">
+    <div class="row header-row active-chapter">
+      <div class="col-md-12" ng-click="showChapterSelection = !showChapterSelection">
+        {{chapterName || "Pick a Chapter"}}
+      </div>
+    </div>
+    <div class="row selection-row" ng-show="showChapterSelection" >
+      <div class="col-md-3">
+        <div ng-repeat="chapter in chapters.slice(0,3)"> <div class="header-selection" ng-click="selectChapter(chapter)">{{chapter}}</div></div>
+      </div>
+      <div class="col-md-3">
+        <div ng-repeat="chapter in chapters.slice(3,6)"> <div class="header-selection" ng-click="selectChapter(chapter)">{{chapter}}</div></div>
+      </div>
+      <div class="col-md-3">
+        <div ng-repeat="chapter in chapters.slice(6,9)"> <div class="header-selection" ng-click="selectChapter(chapter)">{{chapter}}</div></div>
+      </div>
+      <div class="col-md-3">
+        <div ng-repeat="chapter in chapters.slice(9,12)"> <div class="header-selection" ng-click="selectChapter(chapter)">{{chapter}}</div></div>
+      </div>
+    </div>
+    <div class="row header-row active-section" ng-click="showSectionSelection = !showSectionSelection">
+      <div class="col-md-12">
+        {{sectionName || "Pick a Section"}}
+      </div>
+    </div>
+    <div class="row selection-row" ng-show="showSectionSelection">
+      <div class="col-md-3">
+        <div ng-repeat="section in sections.slice(0,5)"> <div class="header-selection" ng-click="selectSection(section)">{{section}}</div></div>
+      </div>
+      <div class="col-md-3">
+        <div ng-repeat="section in sections.slice(5,10)"> <div class="header-selection" ng-click="selectSection(section)">{{section}}</div></div>
+      </div>
+      <div class="col-md-3">
+        <div ng-repeat="section in sections.slice(10,15)"> <div class="header-selection" ng-click="selectSection(section)">{{section}}</div></div>
+      </div>
+      <div class="col-md-3">
+        <div ng-repeat="section in sections.slice(15,20)"> <div class="header-selection" ng-click="selectSection(section)">{{section}}</div></div>
+      </div>
+    </div>
+    <div class="row header-row active-video" ng-click="showVideoSelection = !showVideoSelection">
+      <div class="col-md-12">
+        {{videoName || "Pick a Video"}}
+      </div>
+    </div>
+    <div class="row selection-row" ng-show="showVideoSelection">
+      <div class="col-md-3">
+        <div ng-repeat="video in videos.slice(0,4)"> <div class="header-selection" ng-click="playVideo(video)">{{video.title}}</div></div>
+      </div>
+      <div class="col-md-3">
+        <div ng-repeat="video in videos.slice(4,8)"> <div class="header-selection" ng-click="playVideo(video)">{{video.title}}</div></div>
+      </div>
+      <div class="col-md-3">
+        <div ng-repeat="video in videos.slice(8,12)"> <div class="header-selection" ng-click="playVideo(video)">{{video.title}}</div></div>
+      </div>
+      <div class="col-md-3">
+        <div ng-repeat="video in videos.slice(12,16)"> <div class="header-selection" ng-click="playVideo(video)">{{video.title}}</div></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 video-box">
+        <div class="videoWrapper" ng-if="videoURL" >
+          <iframe ng-src="{{videoURL}}" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+      <div class="col-md-6">
+
+    </div>
+  </section>
+
+</body>
+</html>
