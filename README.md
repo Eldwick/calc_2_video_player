@@ -2,9 +2,9 @@
 
 <center><img src="http://www.opentextbookstore.com/covers/hoffmancalc1.jpg" width="196" height="196" alt="Contemporary Calculus"><img src="https://yt3.ggpht.com/-ss1R1LMzxKk/AAAAAAAAAAI/AAAAAAAAAAA/jsQ17GsKAKo/s100-c-k-no/photo.jpg" width="196" height="196" alt="Mathispower4u"></center>
 
-Videos created by [Jame Sousa](http://www.mathispower4u.com/)
-
 Textbook: [Contemporary Calculus by Dale Hoffman](http://scidiv.bellevuecollege.edu/dh/Calculus_all/Calculus_all.html)
+
+Videos created by [James Sousa](http://www.mathispower4u.com/)
 
 Video Player created by [James Jalandoni](https://www.linkedin.com/in/jamesjalandoni)
 
@@ -31,8 +31,8 @@ The hash uses a template below:
             id: video_1_youtube_id
           },
           {
-            title: video_1_title,
-            id: video_1_youtube_id
+            title: video_2_title,
+            id: video_2_youtube_id
           }]
        }
     }
